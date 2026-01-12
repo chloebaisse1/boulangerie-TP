@@ -22,10 +22,9 @@ body {
 .navbar-text {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #8b5e34 !important; /* On reprend votre marron chaud */
+  color: #8b5e34 !important;
 }
 
-/* On s'assure que sur mobile l'adresse ne crée pas de décalage bizarre */
 @media (max-width: 991px) {
   .navbar-text {
     display: none !important;
@@ -39,6 +38,7 @@ body {
 .description-text {
   font-style: italic;
   color: #6c757d;
+  margin-bottom: 25px;
 }
 
 .shop-img {
@@ -52,6 +52,7 @@ body {
 .section-title {
   color: #8b5e34;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .divider {
   height: 3px;
@@ -60,34 +61,41 @@ body {
   margin: 10px auto;
 }
 
-/* --- Configuration des Carrousels Côte à Côte --- */
-
-/* On enlève le max-width: 650px pour permettre aux colonnes Bootstrap de fonctionner */
+/* --- Configuration des Carrousels --- */
 .carousel {
   border-radius: 30px;
   overflow: hidden;
   background-color: white;
   border: 1px solid #eee4d8;
   margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
-/* On fixe une hauteur commune pour que les deux carrousels soient alignés */
+.carousel:hover {
+  transform: translateY(-5px); /* Légère élévation au survol de la carte */
+}
+
+/* Hauteur ajustée pour inclure le prix et le bouton sans scroll */
 .carousel-inner {
-  height: 520px;
+  height: 580px;
 }
 
 .carousel-item img {
   height: 280px;
   width: 100%;
-  object-fit: cover; /* "cover" est souvent plus élégant pour remplir la card uniformément */
-  padding: 0; /* On enlève le padding pour un look plus moderne, ou gardez 15px si vous voulez un cadre */
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-/* --- Zone de texte et bouton (Caption) --- */
-/* Bootstrap positionne le caption en absolute par défaut, on le remet en flux normal pour contrôler l'espace */
+/* Effet de zoom sur l'image au survol */
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+/* --- Zone de texte, Prix et Bouton --- */
 .carousel-caption {
-  position: static;
-  padding: 30px 20px;
+  position: static; /* Remet le texte sous l'image */
+  padding: 25px 20px;
   color: #4a3728;
   text-align: center;
 }
@@ -96,14 +104,27 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   color: #8b5e34;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .carousel-caption p {
   font-size: 0.95rem;
-  margin-bottom: 20px;
   color: #6c757d;
-  min-height: 48px; /* Force la zone de texte à avoir la même hauteur partout */
+  min-height: 45px; /* Aligne les textes sur tous les slides */
+  margin-bottom: 10px;
+}
+
+/* --- Badge de Prix --- */
+.price-tag {
+  display: inline-block;
+  background-color: #fdfaf5;
+  color: #d4a373;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 4px 18px;
+  border-radius: 50px;
+  border: 1px solid #eee4d8;
+  margin-bottom: 20px;
 }
 
 /* --- Boutons --- */
@@ -121,14 +142,16 @@ body {
 .btn-reserve:hover {
   background-color: #d4a373;
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(139, 94, 52, 0.4);
+  transform: scale(1.05);
 }
 
-/* Flèches de navigation sombres pour être visibles sur fond blanc */
+/* Flèches de navigation */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1) grayscale(100) brightness(0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 15px;
 }
 
 /* --- Horaires --- */
