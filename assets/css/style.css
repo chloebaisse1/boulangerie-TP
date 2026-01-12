@@ -116,15 +116,14 @@ body {
 
 /* --- Badge de Prix --- */
 .price-tag {
-  display: inline-block;
-  background-color: #fdfaf5;
-  color: #d4a373;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 4px 18px;
-  border-radius: 50px;
-  border: 1px solid #eee4d8;
-  margin-bottom: 20px;
+  display: block; /* Prend sa propre ligne */
+  color: #d4a373; /* Couleur dorée pour le distinguer discrètement */
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  background: none; /* Enlève le fond */
+  border: none; /* Enlève la bordure */
+  padding: 0; /* Enlève l'espace interne */
 }
 
 /* --- Boutons --- */
@@ -145,15 +144,23 @@ body {
   transform: scale(1.05);
 }
 
-/* Flèches de navigation */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(1) grayscale(100) brightness(0.5);
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  padding: 15px;
+  background-color: transparent;
+  filter: none;
+  box-shadow: none;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; /* Devient bien blanc au survol */
+}
 /* --- Horaires --- */
 .schedule-box {
   background-color: white;
