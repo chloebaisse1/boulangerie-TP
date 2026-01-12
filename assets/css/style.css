@@ -1,0 +1,131 @@
+/* --- Bases --- */
+body {
+  background-color: #fdfaf5;
+  color: #4a3728;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 2px solid #eee4d8;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #d4a373 !important;
+}
+
+.nav-link {
+  color: #d4a373;
+}
+
+/* --- Présentation & Image Boutique --- */
+.hero-section h1 {
+  color: #8b5e34;
+}
+.description-text {
+  font-style: italic;
+  color: #6c757d;
+}
+
+.shop-img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+  border: 8px solid white;
+}
+
+/* --- Titres de Section --- */
+.section-title {
+  color: #8b5e34;
+  letter-spacing: 2px;
+}
+.divider {
+  height: 3px;
+  width: 60px;
+  background-color: #d4a373;
+  margin: 10px auto;
+}
+
+/* --- Configuration des Carrousels Côte à Côte --- */
+
+/* On enlève le max-width: 650px pour permettre aux colonnes Bootstrap de fonctionner */
+.carousel {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #eee4d8;
+  margin-bottom: 30px;
+}
+
+/* On fixe une hauteur commune pour que les deux carrousels soient alignés */
+.carousel-inner {
+  height: 520px;
+}
+
+.carousel-item img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover; /* "cover" est souvent plus élégant pour remplir la card uniformément */
+  padding: 0; /* On enlève le padding pour un look plus moderne, ou gardez 15px si vous voulez un cadre */
+}
+
+/* --- Zone de texte et bouton (Caption) --- */
+/* Bootstrap positionne le caption en absolute par défaut, on le remet en flux normal pour contrôler l'espace */
+.carousel-caption {
+  position: static;
+  padding: 30px 20px;
+  color: #4a3728;
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #8b5e34;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #6c757d;
+  min-height: 48px; /* Force la zone de texte à avoir la même hauteur partout */
+}
+
+/* --- Boutons --- */
+.btn-reserve {
+  background-color: #8b5e34;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(139, 94, 52, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-reserve:hover {
+  background-color: #d4a373;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(139, 94, 52, 0.4);
+}
+
+/* Flèches de navigation sombres pour être visibles sur fond blanc */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100) brightness(0.5);
+}
+
+/* --- Horaires --- */
+.schedule-box {
+  background-color: white;
+  border: 1px solid #eee4d8;
+}
+.schedule-box h3 {
+  color: #8b5e34;
+}
+.schedule-box strong {
+  color: #d4a373;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'Épi Doré - Boulangerie Artisanale</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/">L'Épi Doré</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-section text-center container my-5">
+      <h1 class="display-4 fw-bold pt-5">L'Épi Doré</h1>
+      <p class="description-text">
+        Bienvenue dans notre univers gourmand. Chaque matin, notre fournil
+        s'éveille pour vous offrir le plaisir incomparable du pain chaud et
+        croustillant.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <img
+            src="assets/img/home.png"
+            class="img-fluid shop-img shadow rounded-4"
+            alt="Notre Boulangerie"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="text-center mb-4">
+            <h2 class="section-title">Nos Gâteaux</h2>
+            <div class="divider mx-auto"></div>
+          </div>
+          <div
+            id="cakeCarousel"
+            class="carousel slide shadow-lg"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="assets/img/gateaux/img6.jpg"
+                  class="d-block w-100"
+                  alt="Carrot Cake"
+                />
+                <div class="carousel-caption">
+                  <h5>L'Ambré d'Automne</h5>
+                  <p>
+                    Carrot cake aux épices douces et glaçage onctueux au cream
+                    cheese.
+                  </p>
+                  <button class="btn btn-reserve btn-action-reserver">
+                    <i class="fas fa-calendar-alt me-2"></i>Réserver
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="assets/img/gateaux/img1.jpg"
+                  class="d-block w-100"
+                  alt="Gâteau Chocolat"
+                />
+                <div class="carousel-caption">
+                  <h5>L'Obsession Fondante</h5>
+                  <p>Chocolat noir 70% et éclats de noisettes torréfiées.</p>
+                  <button class="btn btn-reserve btn-action-reserver">
+                    <i class="fas fa-calendar-alt me-2"></i>Réserver
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#cakeCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#cakeCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="text-center mb-4">
+            <h2 class="section-title">Nos Viennoiseries</h2>
+            <div class="divider mx-auto"></div>
+          </div>
+          <div
+            id="pastryCarousel"
+            class="carousel slide shadow-lg"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="assets/img/viennoiseries/croissant.jpg"
+                  class="d-block w-100"
+                  alt="Croissant"
+                />
+                <div class="carousel-caption">
+                  <h5>Le Croissant Signature</h5>
+                  <p>
+                    Un feuilletage pur beurre AOP, croustillant et léger à
+                    souhait.
+                  </p>
+                  <button class="btn btn-reserve btn-action-reserver">
+                    <i class="fas fa-cookie-bite me-2"></i>Réserver
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="assets/img/viennoiseries/pain-chocolat.jpg"
+                  class="d-block w-100"
+                  alt="Pain au chocolat"
+                />
+                <div class="carousel-caption">
+                  <h5>L'Escapade Chocolat</h5>
+                  <p>
+                    Pain au chocolat intense avec barres de cacao grand cru.
+                  </p>
+                  <button class="btn btn-reserve btn-action-reserver">
+                    <i class="fas fa-cookie-bite me-2"></i>Réserver
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#pastryCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#pastryCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="container my-5 text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-6 schedule-box p-4 rounded-4 shadow-sm">
+          <h3 class="mb-4"><i class="fas fa-clock me-2"></i>Nos Horaires</h3>
+          <ul class="list-unstyled">
+            <li class="d-flex justify-content-between border-bottom py-2">
+              <span>Lundi - Vendredi</span><strong>07:00 - 19:30</strong>
+            </li>
+            <li class="d-flex justify-content-between border-bottom py-2">
+              <span>Samedi</span><strong>07:30 - 19:00</strong>
+            </li>
+            <li class="d-flex justify-content-between py-2 text-danger">
+              <span>Dimanche</span><strong>Fermé</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
