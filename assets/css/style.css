@@ -19,6 +19,19 @@ body {
   color: #d4a373;
 }
 
+.navbar-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8b5e34 !important; /* On reprend votre marron chaud */
+}
+
+/* On s'assure que sur mobile l'adresse ne crée pas de décalage bizarre */
+@media (max-width: 991px) {
+  .navbar-text {
+    display: none !important;
+  }
+}
+
 /* --- Présentation & Image Boutique --- */
 .hero-section h1 {
   color: #8b5e34;

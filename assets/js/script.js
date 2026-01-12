@@ -1,33 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Sélectionner tous les boutons de réservation
-  const reserveButtons = document.querySelectorAll(".btn-reserve")
+  const reserveButtons = document.querySelectorAll(".btn-action-reserver")
 
-  //  Ecouteur d'événement sur chaque bouton de réservation
-  reserveButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      // Récupérer le nom du gâteau associé
-      const cakeName = button
-        .closest(".carousel-caption")
-        .querySelector("h5").innerText
+  console.log("Boutons trouvés :", reserveButtons.length)
 
-      // Affichage console
-      console.log(
-        `Tentative de réservation pour : ${cakeName} (Index: ${index})`
-      )
+  reserveButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      // Empêche rechargement
+      e.preventDefault()
 
-      // Popup (Alerte)
+      const caption = button.closest(".carousel-caption")
+      const productName = caption.querySelector("h5").innerText
+
+      console.log("Clic sur : " + productName)
+
+      // Alerte personnalisée
       alert(
-        `🧁 Gourmandise en vue !\n\nVous avez choisi : ${cakeName}.\nNotre équipe prépare votre réservation. À très vite à la boulangerie !`
+        `🧁 Gourmandise en vue !\n\n` +
+          `Vous avez choisi : ${productName}.\n` +
+          `Notre équipe prépare votre réservation. À très vite à la boulangerie !`
       )
 
-      // effet visuel sur le bouton
-      const originalText = button.innerHTML
+      // Animation du bouton
+      const originalContent = button.innerHTML
       button.innerHTML = "<i class='fas fa-check me-2'></i>C'est noté !"
-      button.classList.replace("btn-reserve", "btn-success")
+      button.classList.add("btn-success")
 
       setTimeout(() => {
-        button.innerHTML = originalText
-        button.classList.replace("btn-success", "btn-reserve")
+        button.innerHTML = originalContent
+        button.classList.remove("btn-success")
       }, 3000)
     })
   })
